@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2020
 ** my_printf.c
 ** File description:
-** My own printf function
+** function that display on shell
 */
 
 #include <stdarg.h>
@@ -11,7 +11,9 @@
 #include "../../include/my.h"
 
 int flag_check(char c);
+
 void flags(char c, va_list arg);
+
 void flags_suite(char c, va_list arg);
 
 int my_put_nbrbase(unsigned int nb, int base)
@@ -27,7 +29,7 @@ int my_put_nbrbase(unsigned int nb, int base)
         nb = nb / base;
     }
     arr[i] = -2;
-    for (len = 0; arr[len + 1] != -2; len ++);
+    for (len = 0; arr[len + 1] != -2; len++);
     while (arr[len] != -2) {
         my_printf("%i", arr[len]);
         len--;

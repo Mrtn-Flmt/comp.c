@@ -9,6 +9,7 @@
 #include "../../include/my.h"
 
 int my_put_nbrbase(unsigned int nb, int base);
+
 int my_putstr_all(char *str);
 
 int flag_check(char c)

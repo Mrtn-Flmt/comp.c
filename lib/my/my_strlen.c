@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2020
-** test strlen$
+** my_strlen.c
 ** File description:
-** test strlen
+** test my_strlen
 */
 
 int my_strlen(char const *str)

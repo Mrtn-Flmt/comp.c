@@ -7,4 +7,12 @@
 
 #include "../include/my.h"
 
-int main (void){}
+int main (int ac, char **av)
+{
+    if (ac != 3) {
+        return (84);
+    } else {
+
+    }
+    return (0);
+}

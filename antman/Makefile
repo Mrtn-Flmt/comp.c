@@ -8,6 +8,8 @@
 LPATH	=	../lib/my/
 
 SRC	=	./main.c\
+		$(LPATH)fd_read.c	\
+		$(LPATH)swap_char.c	\
 		$(LPATH)my_printf.c	\
 		$(LPATH)my_printf_checks.c	\
 		$(LPATH)my_putchar.c\
