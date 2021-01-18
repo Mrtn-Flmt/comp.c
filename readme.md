@@ -19,7 +19,7 @@
         - [x] Check if all arguments are passed
         - [ ] Check if arguments are valid
     - [ ] Compression :
-        - [ ] Read the file, and put its content in a string
+        - [x] Read the file, and put its content in a string
         - [ ] Print the content of the file, with compressed data :
             - [ ] '.html' :
                 - [ ] Removing '</>' characters
@@ -34,7 +34,7 @@
         - [x] Check if all arguments are passed
         - [ ] Check if arguments are valid
     - [ ] Decompression :
-        - [ ] Read the file, and put its content in a string
+        - [x] Read the file, and put its content in a string
         - [ ] Print the content of the file, with un-compressed data :
             - [ ] '.html' :
                 - [ ] Replacing all '</>' according to the index at the end of the files

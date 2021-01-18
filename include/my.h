@@ -6,6 +6,9 @@
 */
 
 #include <stdlib.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 int my_printf(const char *format, ...);
 void my_putchar(char c);
