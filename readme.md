@@ -16,7 +16,8 @@
 
 - [ ] Antman :
     - [ ] Error Management :
-        - [ ] Check if [file] correspond the [type]
+        - [x] Check if all arguments are passed
+        - [ ] Check if arguments are valid
     - [ ] Compression :
         - [ ] Read the file, and put its content in a string
         - [ ] Print the content of the file, with compressed data :
@@ -30,7 +31,8 @@
                 - [ ] Printing a suite of numbers, corresponding to the original file, according to the index
 - [ ] Giantman :
     - [ ] Error Management :
-        - [ ] Check if [file] correspond the [type]
+        - [x] Check if all arguments are passed
+        - [ ] Check if arguments are valid
     - [ ] Decompression :
         - [ ] Read the file, and put its content in a string
         - [ ] Print the content of the file, with un-compressed data :

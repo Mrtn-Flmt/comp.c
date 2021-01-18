@@ -5,6 +5,8 @@
 ** Library includes
 */
 
+#include <stdlib.h>
+
 int my_printf(const char *format, ...);
 void my_putchar(char c);
 int my_put_nbr(int nb);

@@ -9,10 +9,7 @@
 
 int main (int ac, char **av)
 {
-    if (ac != 3) {
+    if (ac != 3)
         return (84);
-    } else {
-
-    }
     return (0);
 }
