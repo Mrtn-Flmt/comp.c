@@ -8,6 +8,7 @@
 LPATH	=	../lib/my/
 
 SRC	=	./main.c\
+		./html_comp.c\
 		./lyr_comp.c\
 		$(LPATH)fd_read.c	\
 		$(LPATH)swap_char.c	\
