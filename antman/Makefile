@@ -9,7 +9,8 @@ LPATH	=	../lib/my/
 
 SRC	=	./main.c\
 		./lyrics/lyr_comp.c\
-		$(LPATH)fd_read.c	\
+		./ppm/ppm_comp.c\
+		$(LPATH)get_content.c\
 		$(LPATH)swap_char.c	\
 		$(LPATH)my_printf.c	\
 		$(LPATH)my_printf_checks.c	\

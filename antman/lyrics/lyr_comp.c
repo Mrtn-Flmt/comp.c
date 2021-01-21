@@ -18,7 +18,7 @@ char **str_to_strstr(char *arg)
     for (int i = 0; i < av_len; i++)
         if (arg[i] == ' ' || '\n' || '\0')
             spc_nbr++;
-    str = malloc(sizeof(char*) * spc_nbr);
+    str = malloc(sizeof(char *) * spc_nbr);
     for (int i = 0; i <= av_len; i++)
         if (arg[i] == ' ' || arg[i] == '\0' || arg[i] == '\n') {
             str[ptr_ind] = malloc(sizeof(char) * (i - cp));
