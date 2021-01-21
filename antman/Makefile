@@ -11,7 +11,6 @@ SRC	=	./main.c\
 		./lyrics/lyr_comp.c\
 		./ppm/ppm_comp.c\
 		$(LPATH)get_content.c\
-		$(LPATH)swap_char.c	\
 		$(LPATH)my_printf.c	\
 		$(LPATH)my_printf_checks.c	\
 		$(LPATH)my_putchar.c\
