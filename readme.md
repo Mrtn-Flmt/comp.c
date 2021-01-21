@@ -18,6 +18,7 @@
     - [ ] Error Management :
         - [x] Check if all arguments are passed
         - [ ] Check if arguments are valid
+        - [x] Check if the file open correctly
     - [ ] Compression :
         - [x] Read the file, and put its content in a string
         - [ ] Print the content of the file, with compressed data :
@@ -33,6 +34,7 @@
     - [ ] Error Management :
         - [x] Check if all arguments are passed
         - [ ] Check if arguments are valid
+        - [x] Check if the file open correctly
     - [ ] Decompression :
         - [x] Read the file, and put its content in a string
         - [ ] Print the content of the file, with un-compressed data :

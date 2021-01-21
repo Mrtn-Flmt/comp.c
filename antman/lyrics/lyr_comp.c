@@ -75,9 +75,7 @@ char **indexing_strstr(char **content)
 
 void lyr_comp(char *content)
 {
-    char **strstr;
     char **index;
 
-    strstr = str_to_strstr(content);
-    index = indexing_strstr(strstr);
+    index = indexing_strstr(str_to_strstr(content));
 }
