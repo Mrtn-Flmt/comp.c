@@ -18,7 +18,10 @@ int open_test(char *filepath)
 
 int main (int ac, char **av)
 {
-    if (ac != 3 || open_test(av[1]) == 84)
+    if (ac != 3 || open_test(av[1]) == 84 ||
+    my_strlen(av[2]) != 1)
         return (84);
+    if (av[2] == "1")
+        lyr_comp(get_content(av[1]));
     return (0);
 }

@@ -36,7 +36,7 @@ int str_compare(char *str1, char *str2)
 {
     int len1 = my_strlen(str1);
     int len2 = my_strlen(str2);
-
+    my_printf("STR_COMPARE\n");
     if (len1 != len2)
         return (0);
     for (int i = 0; str1[i] != '\0'; i++)
@@ -45,14 +45,12 @@ int str_compare(char *str1, char *str2)
     return (1);
 }
 
-int is_inIndex(char *word, char **index, int row)
+int is_inIndex(char *word, char **index)
 {
-    int w_len = my_strlen(word);
-    int i_len;
-
-    for (int i = 0; index[i] != NULL && i < row; i++) {
-        i_len = my_strlen(index[i]);
-        if (w_len == i_len && str_compare(word, index[i]) == 1)
+    my_printf("IS_ININDEX\n");
+    for (int i = 0; index[i] != NULL; i++) {
+        my_printf("\t\tIS_ININDEX >> FOR\n");
+        if (str_compare(word, index[i]) == 1)
             return (1);
     }
     return (0);
@@ -61,21 +59,30 @@ int is_inIndex(char *word, char **index, int row)
 char **indexing_strstr(char **content)
 {
     char **index;
-    int i;
+    int ind_i = 0;
+    int cont_i = 0;
 
     index = malloc(sizeof(content));
-    for (i = 0; content[i] != NULL; i++)
-        if (is_inIndex(content[i], index, i + 1) == 0) {
-            index[i] = malloc(sizeof(content[i]));
-            index[i] = content[i];
+    for (; content[cont_i] != NULL; cont_i++) {
+        my_printf("INDEXING_STRSTR >> FOR\n");
+        if (is_inIndex(content[cont_i], index) == 0) {
+            my_printf("\tINDEXING_STRSTR >> FOR >> IF\n");
+            index[ind_i] = malloc(sizeof(content[cont_i]));
+            index[ind_i] = content[cont_i];
+            index[ind_i + 1] = NULL;
+            ind_i++;
         }
-    index[i] = NULL;
+    }
     return (index);
 }
 
 void lyr_comp(char *content)
 {
     char **index;
+    char **strstr;
 
-    index = indexing_strstr(str_to_strstr(content));
+    strstr = str_to_strstr(content);
+    index = indexing_strstr(strstr);
+    for (int i = 0; index[i] != NULL; i++)
+        my_printf("%s@", index[i]);
 }
