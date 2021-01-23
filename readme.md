@@ -27,9 +27,9 @@
                 - [ ] Printing an index at the end for the decompression
             - [ ] '.ppm' :
                 - [ ] Remplacing numbers between 31 and 100 by a corresponding char in the ASCII table
-            - [ ] '.lyr' :
+            - [x] '.lyr' :
                 - [x] Indexing all words at the beggining (only once per word)
-                - [ ] Printing a suite of numbers, corresponding to the original file, according to the index
+                - [x] Printing a suite of numbers, corresponding to the original file, according to the index
 - [ ] Giantman :
     - [ ] Error Management :
         - [x] Check if all arguments are passed

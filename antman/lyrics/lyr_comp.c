@@ -36,7 +36,6 @@ int str_compare(char *str1, char *str2)
 {
     int len1 = my_strlen(str1);
     int len2 = my_strlen(str2);
-    my_printf("STR_COMPARE\n");
     if (len1 != len2)
         return (0);
     for (int i = 0; str1[i] != '\0'; i++)
@@ -47,9 +46,7 @@ int str_compare(char *str1, char *str2)
 
 int is_inIndex(char *word, char **index)
 {
-    my_printf("IS_ININDEX\n");
     for (int i = 0; index[i] != NULL; i++) {
-        my_printf("\t\tIS_ININDEX >> FOR\n");
         if (str_compare(word, index[i]) == 1)
             return (1);
     }
@@ -64,9 +61,7 @@ char **indexing_strstr(char **content)
 
     index = malloc(sizeof(content));
     for (; content[cont_i] != NULL; cont_i++) {
-        my_printf("INDEXING_STRSTR >> FOR\n");
         if (is_inIndex(content[cont_i], index) == 0) {
-            my_printf("\tINDEXING_STRSTR >> FOR >> IF\n");
             index[ind_i] = malloc(sizeof(content[cont_i]));
             index[ind_i] = content[cont_i];
             index[ind_i + 1] = NULL;
@@ -85,4 +80,5 @@ void lyr_comp(char *content)
     index = indexing_strstr(strstr);
     for (int i = 0; index[i] != NULL; i++)
         my_printf("%s@", index[i]);
+    print_lyrcomp(strstr, index);
 }
