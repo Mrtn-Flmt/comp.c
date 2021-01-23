@@ -8,38 +8,41 @@
 #include "../../include/my.h"
 #include <unistd.h>
 
-int add(char *content_1, char *content_2)
+int add(char *content, int i)
 {
-    int a = content_1 - 48;
-    int b = content_2 - 48;
+    int a = content[i+1] - 48;
+    int b = content[i+2] - 48;
     a *= 10;
     int c = a + b;
 
-    my_printf("%c\n", c + 48);
-    return (c);
+    if (c >= 33 && c <= 126)
+        my_printf("%c", c);
+    else
+        my_printf("%c%c", content[i+1], content[i+2]);
 }
 
-void my_crypt(char *content, char c)
+void display(char *content, int i)
 {
-    for (int i = 0; content[i] != '\0'; i++) {
-        if (content[i] == '0') {
+        my_putchar(content[i]);
+        add(content, i);
+}
+
+void my_crypt(char *content)
+{
+    for (int i = 0; content[i] != '\0';) {
+        if (content[i] >= '0' && content[i] <= '9'
+            && content[i + 1] >= '0' && content[i + 1] <= '9'
+            && content[i + 2] >= '0' && content[i + 2] <= '9') {
+                display(content, i);
+                i += 2;
+        } else
             my_putchar(content[i]);
-            add(content[i+1], content[i+2]);
-            i += 3;
-        } else if (content[i] == '1') {
-            my_putchar(content[i]);
-            add(content[i+1], content[i+2]);
-            i += 3;
-        } else if (content[i] == '2') {
-            my_putchar(content[i]);
-            add(content[i+1], content[i+2]);
-            i += 3;
-        }
+            i++;
     }
 }
 
 void ppm_comp(char *path)
 {
     char *file_content = get_content(path);
-    my_crypt(file_content, '2');
+    my_crypt(file_content);
 }
