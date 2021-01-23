@@ -10,11 +10,17 @@
 void print_lyrcomp(char **cont, char **ind)
 {
     int i;
+    int iInd = 0;
 
-    for (int i_cont = 0; cont[i_cont] != NULL; i_cont++) {
+    for (int iCont = 0; cont[iCont] != NULL; iCont++) {
         i = 1;
-        for (int i_ind = 0; str_compare(ind[i_ind], cont[i_cont]) == 0; i++, i_ind++);
-        my_printf("%i ", i);
+        while (str_compare(ind[iInd], cont[iCont]) == 0) {
+            i++;
+            iInd++;
+        }
+        my_printf("%i", i);
+        if (cont[iCont + 1] != NULL)
+            my_printf(" ");
     }
     my_printf("\n");
 }

@@ -10,12 +10,11 @@
 char **str_to_strstr(char *arg)
 {
     char **str;
-    int av_len = my_strlen(arg);
     int spc_nbr = 0;
     int ptr_ind = 0;
     int cp = 0;
 
-    for (int i = 0; i < av_len; i++)
+    for (int i = 0; i < my_strlen(arg); i++)
         if (arg[i] == ' ' || '\n' || '\0')
             spc_nbr++;
     str = malloc(sizeof(char *) * spc_nbr);

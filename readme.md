@@ -15,9 +15,8 @@
 ### TODO
 
 - [ ] Antman :
-    - [ ] Error Management :
+    - [x] Error Management :
         - [x] Check if all arguments are passed
-        - [ ] Check if arguments are valid
         - [x] Check if the file open correctly
     - [ ] Compression :
         - [x] Read the file, and put its content in a string
@@ -31,9 +30,8 @@
                 - [x] Indexing all words at the beggining (only once per word)
                 - [x] Printing a suite of numbers, corresponding to the original file, according to the index
 - [ ] Giantman :
-    - [ ] Error Management :
+    - [x] Error Management :
         - [x] Check if all arguments are passed
-        - [ ] Check if arguments are valid
         - [x] Check if the file open correctly
     - [ ] Decompression :
         - [x] Read the file, and put its content in a string

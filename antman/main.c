@@ -11,8 +11,11 @@ int open_test(char *filepath)
 {
     int fd = open(filepath, O_RDONLY);
 
-    if (fd == 0)
+    if (fd == 0) {
+        close (fd);
         return (84);
+    }
+    close(fd);
     return (0);
 }
 

@@ -7,25 +7,15 @@
 
 #include "../include/my.h"
 
-char *get_content(char *filepath)
-{
-    int fd = open(filepath, O_RDONLY);
-    char *buffer;
-    struct stat st;
-
-    stat(filepath, &st);
-    buffer = malloc(sizeof(char) * st.st_size);
-    read(fd, buffer, st.st_size);
-    close(fd);
-    return (buffer);
-}
-
 int open_test(char *filepath)
 {
     int fd = open(filepath, O_RDONLY);
 
-    if (fd == 0)
+    if (fd == 0) {
+        close(fd);
         return (84);
+    }
+    close(fd);
     return (0);
 }
 
