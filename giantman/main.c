@@ -23,5 +23,7 @@ int main(int ac, char **av)
 {
     if (ac != 3 || open_test(av[1]) == 84)
         return (84);
+    if (av[2][0] == '1' && av[2][1] == '\0')
+        lyr_decomp(get_content(av[1]));
     return (0);
 }

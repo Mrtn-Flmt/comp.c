@@ -26,5 +26,7 @@ int main (int ac, char **av)
         return (84);
     if (av[2][0] == '1' && av[2][1] == '\0')
         lyr_comp(get_content(av[1]));
+    if (av[2][0] == '3' && av[2][1] == '\0')
+        ppm_comp(av[1]);
     return (0);
 }

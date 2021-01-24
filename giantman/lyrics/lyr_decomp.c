@@ -31,11 +31,34 @@ char **get_index(char *con)
     return (index);
 }
 
+int get_size(char *content, int index)
+{
+    int i = 0;
+
+    while (content[index] != ' ' && '@')
+        i++;
+    return (i);
+}
+
+char **get_suite(char *content)
+{
+    char **suite;
+    int size = 0;
+
+    for (int i = 0; i < my_strlen(content); i++)
+        if (content[i] == ' ')
+            size++;
+    suite = malloc(sizeof(char *) * (size + 1);
+    for (int i = 0; content[i] != '\0'; i++) {
+        if (content[i] == ' ')
+    }
+}
+
 void lyr_decomp(char *content)
 {
     char **index;
+    char **suite;
 
     index = get_index(content);
-    for (int i = 0; index[i] != NULL; i++)
-        my_printf("%s ", index[i]);
+    suite = get_suite(content);
 }

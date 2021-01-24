@@ -8,7 +8,7 @@
 #include "../../include/my.h"
 #include <unistd.h>
 
-int add(char *content, int i)
+void add(char *content, int i)
 {
     int a = content[i+1] - 48;
     int b = content[i+2] - 48;
@@ -29,7 +29,7 @@ void display(char *content, int i)
 
 void my_crypt(char *content)
 {
-    for (int i = 0; content[i] != '\0';) {
+    for (int i = 0; content[i] != '\0'; i++) {
         if (content[i] >= '0' && content[i] <= '9'
             && content[i + 1] >= '0' && content[i + 1] <= '9'
             && content[i + 2] >= '0' && content[i + 2] <= '9') {
@@ -37,7 +37,6 @@ void my_crypt(char *content)
                 i += 2;
         } else
             my_putchar(content[i]);
-            i++;
     }
 }
 

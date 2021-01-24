@@ -23,3 +23,5 @@ void print_lyrcomp(char **content, char **index);
 int str_compare(char *str1, char *str2);
 
 void ppm_comp(char *str);
+
+void lyr_decomp(char *content);
