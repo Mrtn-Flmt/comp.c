@@ -9,6 +9,7 @@ LPATH	=	../lib/my/
 
 SRC	=	./main.c\
 		./lyrics/lyr_decomp.c\
+		./ppm/ppm_decomp.c\
 		$(LPATH)my_printf.c	\
 		$(LPATH)my_printf_checks.c	\
 		$(LPATH)my_putchar.c\

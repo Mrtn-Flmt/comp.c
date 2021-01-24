@@ -22,6 +22,7 @@ void lyr_comp(char *content);
 void print_lyrcomp(char **content, char **index);
 int str_compare(char *str1, char *str2);
 
-void ppm_comp(char *str);
+void ppm_comp(char *path);
 
 void lyr_decomp(char *content);
+void ppm_decomp(char *path);

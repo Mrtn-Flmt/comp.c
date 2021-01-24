@@ -15,7 +15,7 @@ void add(char *content, int i)
     a *= 10;
     int c = a + b;
 
-    if (c >= 33 && c <= 126)
+    if (c >= 58 && c <= 122)
         my_printf("%c", c);
     else
         my_printf("%c%c", content[i+1], content[i+2]);
