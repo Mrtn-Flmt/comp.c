@@ -14,6 +14,7 @@ void print_lyrcomp(char **cont, char **ind)
 
     for (int iCont = 0; cont[iCont] != NULL; iCont++) {
         i = 1;
+        iInd = 0;
         while (str_compare(ind[iInd], cont[iCont]) == 0) {
             i++;
             iInd++;
